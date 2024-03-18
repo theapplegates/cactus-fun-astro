@@ -4,9 +4,14 @@ publishDate: "10 Oct 2023"
 description: "NASA and the search for life. The James Webb Space Telescope continues to impress."
 tags: ["NASA", "Life", "Maybe"]
 ---
+import { Image } from 'astro:assets';
+import methane from 'src/assets/Methane-Carbon-Dioxide-Atmosphere-K2-18-b.png';
+import exo from 'src/assets/EXOPLANET-K2-18-b.jpg';
+
 
 A rendering of what the exoplanet K2-18 b might look like.
 
+<Image src={exo} alt="The exoplanet."/>
 
 I usually don't copy & paste but this is NASA they talk science better tan I do.
 
@@ -23,6 +28,8 @@ The suggestion that the sub-Neptune K2-18 b could be a Hycean exoplanet is intri
 "Our findings underscore the importance of considering diverse habitable environments in the search for life elsewhere," explained Nikku Madhusudhan, an astronomer at the University of Cambridge and lead author of the paper announcing these results. "Traditionally, the search for life on exoplanets has focused primarily on smaller rocky planets, but the larger Hycean worlds are significantly more conducive to atmospheric observations."
 
 The abundance of methane and carbon dioxide, and shortage of ammonia, support the hypothesis that there may be a water ocean underneath a hydrogen-rich atmosphere in K2-18 b. These initial Webb observations also provided a possible detection of a molecule called dimethyl sulfide (DMS). On Earth, this is only produced by life. The bulk of the DMS in Earth’s atmosphere is emitted from phytoplankton in marine environments.
+
+<Image src={methane} alt="The methane measured."/>
 
 The inference of DMS is less robust and requires further validation. “Upcoming Webb observations should be able to confirm if DMS is indeed present in the atmosphere of K2-18 b at significant levels,” explained Madhusudhan.
 
