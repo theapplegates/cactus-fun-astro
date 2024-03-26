@@ -32,8 +32,8 @@ export default {
 			},
 			fontFamily: {
 				// Add any custom fonts here
-				sans: ['Noto Sans Display'],
-				serif: ['Noto Sans Display'],
+				sans: ['Roboto Flex'],
+				serif: ['Roboto Flex'],
 			},
 			transitionProperty: {
 				height: "height",
