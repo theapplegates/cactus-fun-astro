@@ -19,6 +19,7 @@ const {
 
 <html lang={siteConfig.lang}>
 	<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.12.3/cloudinary-core-shrinkwrap.js" integrity="sha512-KMNn99TvNv6bP4D0H1gNhpVSAf5xds74pMwodUgdMcBUkhDn4Wy0bVXPWs+R/dKJU9HKCQg/9ddC9Ji91OsL6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />
 	</head>
 	<body>
@@ -30,4 +31,14 @@ const {
 		</main>
 		<Footer />
 	</body>
+  <script type="text/javascript">
+      my_breakpoints = function (width){  // width - the current width of the containing element
+        return 50 * Math.ceil(width / 50);
+      }
+      var cl = cloudinary.Cloudinary.new({cloud_name: "paulapplegate-com"});
+      // replace 'demo' with your cloud name in the line above
+      cl.config({breakpoints:my_breakpoints, responsive_use_breakpoints:"resize"})
+      cl.responsive();
+  </script>
+
 </html>
