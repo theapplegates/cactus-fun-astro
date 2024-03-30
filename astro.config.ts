@@ -9,9 +9,20 @@ import { remarkReadingTime } from "./src/utils/remark-reading-time";
 import icon from "astro-icon";
 import expressiveCode from "astro-expressive-code";
 import { expressiveCodeOptions } from "./src/site.config";
+import { imageService } from "@unpic/astro/service";
 
 // https://astro.build/config
 export default defineConfig({
+  image: {
+      service: imageService({
+        // This can usually be auto-detected
+        fallbackService: "sharp",
+        placeholder: "blurhash",
+        // This is the default
+        layout: "constrained",
+      }),
+    },
+
 	// ! Please remember to replace the following site property with your own domain
 	site: "https://cactus.paulapplegate.com/",
 	markdown: {
@@ -40,9 +51,6 @@ export default defineConfig({
 		sitemap(),
 		mdx(),
 	],
-	image: {
-		domains: ["webmention.io"],
-	},
 	// https://docs.astro.build/en/guides/prefetch/
 	prefetch: true,
 	vite: {
