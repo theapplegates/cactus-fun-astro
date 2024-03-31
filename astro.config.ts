@@ -17,6 +17,7 @@ export default defineConfig({
       service: imageService({
         // This can usually be auto-detected
         fallbackService: "sharp",
+        domains: ["webmention.io"],
         placeholder: "blurhash",
         // This is the default
         layout: "constrained",
